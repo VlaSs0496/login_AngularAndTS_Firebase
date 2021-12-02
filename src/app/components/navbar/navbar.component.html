@@ -1,0 +1,23 @@
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">
+    <img src="https://cryptologos.cc/logos/shiba-inu-shib-logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    Shiba Inu to the MOON / By Tito VlaSs 
+    </a>
+
+    <div ngbDropdown class="d-inline-block" *ngIf="userLogged|async as user; else btnIngresar">
+        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+            <img [src]="user.photoURL" 
+            width="30" height="30" class="d-inline-block align-top" alt="">
+            {{user.email}}
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button ngbDropdownItem (click)="logout()">Salir</button>
+
+        </div>
+    </div>
+
+
+    <ng-template #btnIngresar>
+        <button class="btn btn-outline-primary" routerLink="/login">Ingresar</button>
+    </ng-template>
+</nav>

@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="card text-center">
+    <div class="card-header">
+        <b>LOGIN</b>
+    </div>
+    <div class="card-body p-4">
+        <label style="float: left;" >Email</label>
+        <input class="form-control m-2" type="email" placeholder="Ingrese su email"[(ngModel)]=usuario.email>
+    
+        <label style="float: left;" >Password</label>
+        <input class="form-control m-2" type="email" type="password" placeholder="Ingrese su password"[(ngModel)]=usuario.password>
+    
+        <button routerLink="/home" class="btn btn-outline-primary btn-block m-2" (click)="Ingresar()">Ingresar</button>
+        <button routerLink="/home" class="btn btn-danger btn-block m-2" (click)="IngresarConGoogle()">Ingresar con Google</button>
+        <button routerLink="/home" class="btn btn-dark btn-block m-2" (click)="IngresarConGit()">Ingresar con GitHub</button>
+        <button routerLink="/home" class="btn btn-primary btn-block m-2" (click)="IngresarConFB()">Ingresar con Facebook</button>
+        <label>Don't you have an account?<a routerLink="/register"> Sign up</a> </label>
+        <div>
+        <button class="btn btn-info m2 btn-block" (click)="obtenerUsuarioLogeado()">Usuario Logeado</button> 
+        
+        </div>
+    </div>
+    
+    
+    </div>
+    </div>
+    
